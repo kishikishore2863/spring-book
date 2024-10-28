@@ -1,6 +1,11 @@
 package com.example.Job_app.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+
 public class Job {
+
 
     private Long id;
 
