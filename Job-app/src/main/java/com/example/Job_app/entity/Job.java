@@ -1,12 +1,13 @@
 package com.example.Job_app.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-
+@Entity
 public class Job {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -19,6 +20,9 @@ public class Job {
 
     private String location;
 
+    @ManyToOne
+    private Company company;
+
     public Job(Long id, String title, String desc, String minSalary, String maxSalary, String location) {
         this.id = id;
         this.title = title;
@@ -26,6 +30,18 @@ public class Job {
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
         this.location = location;
+    }
+
+    public Job(){
+
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Long getId() {
