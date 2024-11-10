@@ -12,5 +12,12 @@ public class LooseCoupling {
 
         UserDataProvider newdb =new NewDatabaseProvider();
         UserManager userManagerwithNewDm = new UserManager(newdb);
+        System.out.println(userManagerwithNewDm.getUserInfo());
+
+
+//        Car tesla = new Tesla();
+//       String engine =tesla.engine();
+//       String type =tesla.type();
+//        System.out.println(engine+" "+type);
     }
 }
