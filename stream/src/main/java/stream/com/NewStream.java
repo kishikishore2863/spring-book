@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public class NewStream {
+public  class NewStream {
 
     public static void main(String[] args) {
         List<Integer> nums = Arrays.asList(1,2,3,4,5,6,7);
@@ -25,7 +25,6 @@ public class NewStream {
                .sorted()
                .map(n->n*1)
                .forEach(n-> System.out.println(n));
-
 
     }
 }
