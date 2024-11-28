@@ -46,12 +46,12 @@ public class Stream {
 //
 
 
-        List<Employee> employees= Arrays.asList(
-                new Employee("kishi","hr",8000),
-                new Employee("king","it",80000),
-                new Employee("warrior","hr",56000),
-                new Employee("dev","it",8000)
-        );
+//        List<Employee> employees= Arrays.asList(
+//                new Employee("kishi","hr",8000),
+//                new Employee("king","it",80000),
+//                new Employee("warrior","hr",56000),
+//                new Employee("dev","it",8000)
+//        );
 
 //        Map<String,List<Employee>>employeeByDepartment=
 //                employees.stream()
@@ -74,10 +74,10 @@ public class Stream {
 //        System.out.println("employee with salary <50000");
 //        filtering.get(false).forEach(System.out::println);
 
-        Map<Boolean,List<Employee>> store = employees.stream()
-                .collect(Collectors.partitioningBy(employee -> employee.getSalary()>29999));
-
-        store.get(true).forEach(System.out::println);
+//        Map<Boolean,List<Employee>> store = employees.stream()
+//                .collect(Collectors.partitioningBy(employee -> employee.getSalary()>29999));
+//
+//        store.get(true).forEach(System.out::println);
 
 
 

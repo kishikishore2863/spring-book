@@ -1,15 +1,38 @@
 package stream.com;
 
-public class MyClass {
-    static int count = 10;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
-    // Static method
-    static void displayCount() {
-        System.out.println("Count: " + count);
-        MyClass myClass = new MyClass();
-        myClass.displayCountInstance();
-    }
-     void displayCountInstance() {
-        System.out.println("Count: from instatce " + count);
-    }
+public class MyClass {
+
+
+        public static void main(String[] args) {
+
+            Scanner sc =new Scanner(System.in);
+            String str1 = sc.nextLine();
+            System.out.println(removeDuplicates(str1));
+        }
+
+        public static String removeDuplicates(String input){
+            String result = "";
+            for(int i=0;i<input.length();i++){
+                char currentChar = input.charAt(i);
+                if(result.indexOf(currentChar) == -1 ){
+                    result +=currentChar;
+                }
+
+            }
+            return result;
+        }
+
+
+
 }
+
+
+
+
+
