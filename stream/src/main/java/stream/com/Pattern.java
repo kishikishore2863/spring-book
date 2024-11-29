@@ -10,7 +10,6 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Pattern {
     public static void main(String[] args) {
@@ -196,15 +195,36 @@ public class Pattern {
 //                .count());
 
 
-        System.out.println(  employees.stream()
-                .filter(e->e.getDepartment().equals("IT"))
-                .mapToDouble(e->e.getSalary())
-                .sum());
+//        System.out.println(  employees.stream()
+//                .filter(e->e.getDepartment().equals("IT"))
+//                .mapToDouble(e->e.getSalary())
+//                .sum());
 
 
-        System.out.println(employees.stream()
-                    .map(e->e.getSalary())
-                    .max(Comparator.naturalOrder()));
+//        System.out.println(employees.stream()
+//                    .map(e->e.getSalary())
+//                    .max(Comparator.naturalOrder()));
+
+
+//
+//        List<String> empNames3 =employees.stream()
+//                .map(e->e.getFirstname())
+//                .distinct()
+//                .collect(Collectors.toUnmodifiableList());
+//        System.out.println(empNames3);
+
+        Map<String,Double> emp = employees.stream()
+                .collect(Collectors.toMap(e->e.getFirstname(),
+                        e->e.getSalary(),
+                        (a,b)-> a
+                ));
+        System.out.println(emp);
+
+
+
+
+
+
 
 
 
