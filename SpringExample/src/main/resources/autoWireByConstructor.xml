@@ -6,10 +6,10 @@
 
     <!-- bean definitions here -->
 
-<!--    <bean id="specification" class="com.example.autowire.constructor.Specification">-->
-<!--        <property name="make" value="Toyota"/>-->
-<!--        <property name="model" value="Innova"/>-->
-<!--    </bean>-->
+    <bean id="specification" class="com.example.autowire.constructor.Specification">
+        <property name="make" value="Toyota"/>
+        <property name="model" value="Innova"/>
+    </bean>
     <bean id="myCar" class="com.example.autowire.constructor.Car" autowire="constructor">
     </bean>
 

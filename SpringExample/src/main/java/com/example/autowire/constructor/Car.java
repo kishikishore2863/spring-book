@@ -1,8 +1,10 @@
 package com.example.autowire.constructor;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Car {
-    private Specification specification;
+    private  Specification specification;
 
     public Car(Specification specification) {
         this.specification = specification;

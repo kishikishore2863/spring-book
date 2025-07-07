@@ -6,12 +6,18 @@
 
     <!-- bean definitions here -->
 
-    <bean id="specification1" class="com.example.autowire.type.name.Specification">
-        <property name="make" value="Toyota"/>
-        <property name="model" value="Innova"/>
+
+
+    <bean id="student" class="master.bean.Student">
+        <constructor-arg value="1"/>
+        <constructor-arg value="kishore"/>
     </bean>
 
-    <bean id="myCar" class="com.example.autowire.type.name.Car" autowire="byType">
+    <bean id="student2" class="master.bean.Student">
+        <property name="id" value="02"/>
+        <property name="name" value="kishi"/>
     </bean>
+
+
 
 </beans>
