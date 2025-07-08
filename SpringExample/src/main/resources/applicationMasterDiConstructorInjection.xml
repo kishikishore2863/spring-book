@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="cod" class="master.di.constructorInjection.Cod"/>
+    <bean id="credit" class="master.di.constructorInjection.Credit"/>
+    <bean id="debit" class="master.di.constructorInjection.Debit"/>
+
+    <bean id="dispatch" class="master.di.constructorInjection.Dispatch">
+        <constructor-arg name="payment" ref="credit"/>
+    </bean>
+
+
+
+</beans>
